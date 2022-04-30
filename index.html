@@ -32,6 +32,11 @@
 	var  unityGame;
 	
 	
+	function ShowInterstitialIndexMethod()
+	{
+		vkBridge.send("VKWebAppShowNativeAds", {ad_format: "interstitial"}).then(unityGame.SendMessage('Receiver', 'ShowAdwHandler')).catch(error => console.log(error));
+	}
+	
 	
       const hideFullScreenButton = "1";
       const buildUrl = "Build";
